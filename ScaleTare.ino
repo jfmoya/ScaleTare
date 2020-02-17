@@ -1,6 +1,6 @@
 #include <SoftwareSerial.h>
-#define RX    3   // *** D3, Pin 2
-#define TX    4   // *** D4, Pin 3
+#define RX    3   // *** D3, Pin 2 on Attiny85
+#define TX    4   // *** D4, Pin 3 on Attiny85
 SoftwareSerial Serial(RX, TX);
 
 String str;
@@ -22,7 +22,7 @@ void loop(){
       
     if(str == "Z"){
       digitalWrite(1, HIGH); // sets the digital pin 13 on
-      delay(100);            // waits for a second
+      delay(100);            // waits for a 0.1 second
       digitalWrite(1, LOW);  // sets the digital pin 13 off
       }
     
